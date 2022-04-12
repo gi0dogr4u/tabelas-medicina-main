@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('../db');
+const database = require('../db/db');
 
 const HistoricoExame = database.define('tb_historico_exame', {
     id: {
@@ -11,12 +11,12 @@ const HistoricoExame = database.define('tb_historico_exame', {
     paciente_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: 'tb_paciente', key: 'id'},
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+        //references: {model: 'tb_paciente', key: 'id'},
+        //onUpdate: 'CASCADE',
+        //onDelete: 'CASCADE'
     },
-    data_inicio_tratamento: Sequelize.DATE,
-    observacao: Sequelize.TEXT
+    data_inicio_tratamento: Sequelize.DATEONLY,
+    observacao: Sequelize.STRING
 }, {freezeTableName: true})
 
 module.exports = HistoricoExame;

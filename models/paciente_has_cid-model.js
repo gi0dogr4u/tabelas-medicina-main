@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('../db');
+const database = require('../db/db');
 
 const PacienteHasCid = database.define('tb_paciente_has_tb_cid', {
     paciente_id: {

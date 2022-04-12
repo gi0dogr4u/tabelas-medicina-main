@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('../db');
+const database = require('../db/db');
 
 const StatusMensagem = database.define('tb_status_mensagem', {
     cd_status: {
