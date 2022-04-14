@@ -11,18 +11,18 @@ const AcessoVascular = database.define('tb_acesso_vascular', {
     usuario_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: 'tb_usuario', key: 'id'},
+        /* references: {model: 'tb_usuario', key: 'id'},
         onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+        onDelete: 'CASCADE' */
     },
     paciente_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: 'tb_paciente', key: 'id'},
+        /* references: {model: 'tb_paciente', key: 'id'},
         onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+        onDelete: 'CASCADE' */
     },
-    descricao: Sequelize.TEXT,
+    descricao: Sequelize.STRING,
 }, {freezeTableName: true})
 
 module.exports = AcessoVascular;

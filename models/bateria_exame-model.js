@@ -11,9 +11,9 @@ const BateriaExame = database.define('tb_bateria_exame', {
     pedido_exame_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: 'tb_pedido_exame', key: 'id'},
+        /* references: {model: 'tb_pedido_exame', key: 'id'},
         onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+        onDelete: 'CASCADE' */
     },
     descricao: Sequelize.TEXT,
 }, {freezeTableName: true})

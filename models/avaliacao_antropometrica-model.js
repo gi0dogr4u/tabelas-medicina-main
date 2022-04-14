@@ -11,9 +11,9 @@ const AvaliacaoAntropometrica = database.define('tb_avaliacao_antropometrica', {
     paciente_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: 'tb_paciente', key: 'id'},
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+        // references: {model: 'tb_paciente', key: 'id'},
+        // onUpdate: 'CASCADE',
+        // onDelete: 'CASCADE'
     },
     data_avaliacao: {
         type: Sequelize.DATEONLY,

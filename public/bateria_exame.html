@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bateria de Exames</title>
+</head>
+
+<body>
+
+    <section class="container-fluid text-white p-5 mt-4">
+        <div class="row bg-dark">
+            <div class="col-lg-7 p-0">
+                <img src="./img/medicina2.png" class="d-block w-100" alt="Califórnia">
+            </div>
+
+            <div class="col-lg-5 p-4 align-self-center">
+                <h1 class="display-4">Pedidos de Exames</h1>
+                <form action="">
+                    <label for="pedido_exame_id">Pedido Exame ID</label>
+                    <div class="input-group-lg mb-3">
+                        <input type="text" class="form-control" id="pedido_exame_id">
+                    </div>
+                    <label for="descricao">Descrição</label>
+                    <div class="input-group-lg mb-3">
+                        <input type="text" class="form-control" id="descricao">
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="enviar()">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function enviar() {
+
+            const dadosTratamento = {
+                pedido_exame_id: document.getElementById('pedido_exame_id').value,
+                descricao: document.getElementById('descricao').value
+            }
+
+            const options = {
+                method: 'POST',
+                headers: new Headers({ 'content-type': 'application/json' }),
+                body: JSON.stringify(dadosTratamento)
+            }
+
+            fetch('http://localhost:3000/bateria_exame', options).then(res => {
+                res.text().then(msg => {
+                    alert(msg);
+
+                })
+            })
+        }
+
+    </script>
+</body>
+
+</html>

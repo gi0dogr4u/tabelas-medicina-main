@@ -16,7 +16,7 @@ const HistoricoExame = database.define('tb_historico_exame', {
         //onDelete: 'CASCADE'
     },
     data_inicio_tratamento: Sequelize.DATEONLY,
-    observacao: Sequelize.STRING
+    observacoes: Sequelize.STRING
 }, {freezeTableName: true})
 
 module.exports = HistoricoExame;

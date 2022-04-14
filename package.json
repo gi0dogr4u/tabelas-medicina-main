@@ -106,7 +106,6 @@
     "moment-timezone": "^0.5.34",
     "ms": "^2.1.2",
     "negotiator": "^0.6.3",
-    "nodemon": "^2.0.15",
     "nopt": "^1.0.10",
     "normalize-path": "^3.0.0",
     "normalize-url": "^4.5.1",
@@ -187,7 +186,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -199,5 +198,8 @@
   "bugs": {
     "url": "https://github.com/oliver-zyn/tabelas-medicina/issues"
   },
-  "homepage": "https://github.com/oliver-zyn/tabelas-medicina#readme"
+  "homepage": "https://github.com/oliver-zyn/tabelas-medicina#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
