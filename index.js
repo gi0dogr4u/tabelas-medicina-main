@@ -31,6 +31,7 @@ app.post('/historico_tratamento', async (req, res) => {
 });
 
 
+
 // Acesso Vascular
 app.post('/acesso_vascular', async (req, res) => {
     let {usuario_id, paciente_id, descricao} = req.body
